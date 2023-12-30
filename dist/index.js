@@ -9,7 +9,16 @@ let sevilay = new person_1.Person("Sevilay");
 sevilay.addCar(new mercedes_1.Mercedes("a180", new engine_1.Engine(engineType_1.EngineType.Diesel, 120)));
 sevilay.addCar(new mercedes_1.Mercedes("C180", new engine_1.Engine(engineType_1.EngineType.Gasoline, 80)));
 sevilay.addCar(new bmw_1.BMW("m6", new engine_1.Engine(engineType_1.EngineType.Gasoline, 180)));
-sevilay.startCar("a180");
+console.log("start car cagirdi");
+// sevilay.startCar("a180")
+// arabacalistir1()
+// // try {
+// //     sevilay.startCar("a180")
+// // } catch(e){
+// //     console.log("expcetion yakalandi")
+// //     console.log(e)
+// // } 
+console.log("buraya geldi.");
 let cars = [
     new mercedes_1.Mercedes("a180", new engine_1.Engine(engineType_1.EngineType.Diesel, 120)),
     new mercedes_1.Mercedes("C180", new engine_1.Engine(engineType_1.EngineType.Gasoline, 80))
@@ -38,7 +47,17 @@ let oytunsNewHorsepower = oytunsCars.map((car) => {
     return car;
 });
 console.log(oytunsNewHorsepower);
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-console.log("sevilay asagida");
-////////// filter Sevilay's mercedes cars
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function runtheCar1() {
+    runtheCar2();
+}
+function runtheCar2() {
+    try {
+        sevilay.startCar("a180");
+    }
+    catch (e) {
+        console.log("expcetion yakalandi");
+        console.log(e);
+    }
+}
 //# sourceMappingURL=index.js.map

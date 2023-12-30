@@ -11,8 +11,19 @@ sevilay.addCar(new Mercedes("a180",new Engine(EngineType.Diesel,120)))
 sevilay.addCar(new Mercedes("C180", new Engine(EngineType.Gasoline,80)))
 sevilay.addCar(new BMW("m6", new Engine(EngineType.Gasoline, 180)))
 
-sevilay.startCar("a180")
 
+console.log("start car cagirdi")
+// sevilay.startCar("a180")
+
+// arabacalistir1()
+// // try {
+// //     sevilay.startCar("a180")
+// // } catch(e){
+// //     console.log("expcetion yakalandi")
+// //     console.log(e)
+// // } 
+
+console.log("buraya geldi.")
 let cars = [
     new Mercedes("a180", new Engine(EngineType.Diesel, 120)),
     new Mercedes("C180", new Engine(EngineType.Gasoline, 80))
@@ -53,7 +64,18 @@ let oytunsNewHorsepower=oytunsCars.map((car)=>{
 
 console.log(oytunsNewHorsepower);
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-console.log("sevilay asagida");
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-////////// filter Sevilay's mercedes cars
+function runtheCar1(){
+    runtheCar2()
+}
+
+function runtheCar2() {
+    try {
+        sevilay.startCar("a180")
+    } catch (e) {
+        console.log("expcetion yakalandi")
+        console.log(e)
+    }
+}
+ 

@@ -7,6 +7,10 @@ export class Person {
     // private name: string
     private name: string;
     
+    private age: number = 21
+    
+    private driverLIcence: string = ""
+    
     constructor(name: string) {
         this.name = name
     }
@@ -16,6 +20,13 @@ export class Person {
     }
     
     startCar(model:string){
+        if(this.age < 18){
+            throw new Error("Person younger than 18, can not drive a car")
+        }
+        console.log("startCar kod buraya geldi ")
+        if (this.driverLIcence == "") {
+            throw new Error("Person that doesn't have licence, can not drive a car");
+        }
         let mercedesC180s = this.cars.filter((car)=>{
            return car.getModel() == model
         })
